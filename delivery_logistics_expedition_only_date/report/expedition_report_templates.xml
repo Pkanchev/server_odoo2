@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <template id="report_delivery_expedition_sheet">
+    <t t-call="web.html_container">
+      <t t-foreach="docs" t-as="o">
+        <t t-call="web.external_layout">
+          <div class="page">
+            <h2>Expedition sheet: <span t-esc="o.name" /></h2>
+
+            <p>
+              <strong>Date:</strong>
+              <span t-esc="o.date" />
+              <br />
+              <strong>Driver:</strong>
+              <span t-esc="o.driver_id.name" />
+              <br />
+              <strong>Vehicle (default):</strong>
+              <span t-esc="o.default_vehicle_id.display_name if o.default_vehicle_id else ''" />
+              <br />
+              <strong>Status:</strong>
+              <span t-esc="o.state" />
+            </p>
+
+            <p>
+              <strong>Total deliveries:</strong> <span t-esc="o.delivery_count" /> &#160; | &#160;
+              <strong>Total boxes:</strong> <span t-esc="o.total_boxes" /> &#160; | &#160;
+              <strong>Total weight (kg):</strong> <span t-esc="o.total_weight" />
+            </p>
+
+            <table class="table table-sm o_main_table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Delivery</th>
+                  <th>Customer</th>
+                  <th>Location/Address</th>
+                  <th>Window</th>
+                  <th>Contact</th>
+                  <th>Region</th>
+                  <th>Priority</th>
+                  <th>Boxes</th>
+                  <th>Weight</th>
+                </tr>
+              </thead>
+              <tbody>
+                <t t-foreach="o.line_ids" t-as="l">
+                  <tr>
+                    <td>
+                      <span t-esc="l.sequence" />
+                    </td>
+                    <td>
+                      <span t-esc="l.picking_id.name" />
+                    </td>
+                    <td>
+                      <span t-esc="l.customer_id.display_name if l.customer_id else ''" />
+                    </td>
+                    <td>
+                      <div>
+                        <span
+                          t-esc="l.delivery_partner_id.display_name if l.delivery_partner_id else ''" />
+                      </div>
+                      <div>
+                        <span t-esc="l.delivery_address" />
+                      </div>
+                    </td>
+                    <td>
+                      <span t-esc="l.delivery_window_from" /> - <span t-esc="l.delivery_window_to" />
+                    </td>
+                    <td>
+                      <div>
+                        <span t-esc="l.delivery_contact_name or ''" />
+                      </div>
+                      <div>
+                        <span t-esc="l.delivery_contact_phone or ''" />
+                      </div>
+                    </td>
+                    <td>
+                      <span t-esc="l.delivery_region or ''" />
+                    </td>
+                    <td>
+                      <span t-esc="l.delivery_priority or ''" />
+                    </td>
+                    <td>
+                      <span t-esc="l.total_boxes" />
+                    </td>
+                    <td>
+                      <span t-esc="l.total_weight" />
+                    </td>
+                  </tr>
+
+                  <!-- Allocation details -->
+                  <t t-if="l.allocation_ids">
+                    <tr>
+                      <td></td>
+                      <td colspan="9">
+                        <strong>Allocation:</strong>
+                        <table class="table table-sm">
+                          <thead>
+                            <tr>
+                              <th>Driver</th>
+                              <th>Vehicle</th>
+                              <th>Boxes</th>
+                              <th>Weight (kg)</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <t t-foreach="l.allocation_ids" t-as="a">
+                              <tr>
+                                <td>
+                                  <span t-esc="a.driver_id.name" />
+                                </td>
+                                <td>
+                                  <span t-esc="a.vehicle_id.display_name if a.vehicle_id else ''" />
+                                </td>
+                                <td>
+                                  <span t-esc="a.boxes" />
+                                </td>
+                                <td>
+                                  <span t-esc="a.weight_kg" />
+                                </td>
+                              </tr>
+                            </t>
+                          </tbody>
+                        </table>
+                        <t t-if="l.delivery_instructions">
+                          <strong>Instructions:</strong>
+                          <div t-esc="l.delivery_instructions" />
+                        </t>
+                      </td>
+                    </tr>
+                  </t>
+                </t>
+              </tbody>
+            </table>
+
+            <t t-if="o.note">
+              <h4>Notes</h4>
+              <div t-esc="o.note" />
+            </t>
+          </div>
+        </t>
+      </t>
+    </t>
+  </template>
+</odoo>

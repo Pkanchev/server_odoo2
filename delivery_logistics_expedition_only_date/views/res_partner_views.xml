@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_partner_form_delivery_logistics" model="ir.ui.view">
+    <field name="name">res.partner.form.delivery.logistics</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form" />
+    <field name="arch" type="xml">
+      <xpath expr="//notebook" position="inside">
+        <page string="Logistics">
+          <group>
+            <group string="Mode">
+              <field name="delivery_mode" />
+            </group>
+
+            <group string="Delivery date (rules)">
+              <field name="delivery_lead_days" />
+              <field name="delivery_weekday" />
+              <field name="delivery_weeks_ahead" />
+            </group>
+          </group>
+
+          <group string="Operational data">
+            <group>
+              <field name="delivery_driver_id" />
+              <field name="delivery_region" />
+              <field name="delivery_priority" />
+            </group>
+            <group>
+              <field name="delivery_window_from" widget="float_time" />
+              <field name="delivery_window_to" widget="float_time" />
+              <field name="delivery_unload_time" />
+            </group>
+            <group>
+              <field name="delivery_contact_name" />
+              <field name="delivery_contact_phone" />
+            </group>
+            <group>
+              <field name="delivery_instructions" nolabel="1" />
+            </group>
+          </group>
+        </page>
+      </xpath>
+    </field>
+  </record>
+</odoo>

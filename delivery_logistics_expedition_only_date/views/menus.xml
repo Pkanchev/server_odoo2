@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Root menu (app entry) -->
+  <menuitem id="menu_delivery_logistics_root" name="Logistics"
+    groups="delivery_logistics_expedition.group_delivery_logistics_user"
+    sequence="10"
+    web_icon="delivery_logistics_expedition,static/description/icon.png" />
+
+  <!-- Expeditions -->
+  <record id="action_delivery_expeditions" model="ir.actions.act_window">
+    <field name="name">Expeditions</field>
+    <field name="res_model">delivery.expedition</field>
+    <field name="view_mode">list,form</field>
+    <field name="context">{}</field>
+  </record>
+
+  <menuitem id="menu_delivery_expeditions" name="Expeditions"
+    parent="menu_delivery_logistics_root"
+    action="action_delivery_expeditions"
+    sequence="10" />
+
+  <!-- Expedition lines -->
+  <record id="action_delivery_expedition_lines" model="ir.actions.act_window">
+    <field name="name">Expedition Lines</field>
+    <field name="res_model">delivery.expedition.line</field>
+    <field name="view_mode">list,form</field>
+    <field name="context">{}</field>
+  </record>
+
+  <menuitem id="menu_delivery_expedition_lines" name="Expedition Lines"
+    parent="menu_delivery_logistics_root"
+    action="action_delivery_expedition_lines"
+    sequence="20" />
+
+  <!-- Fleet vehicles shortcut -->
+  <menuitem id="menu_delivery_fleet_vehicles" name="Vehicles"
+    parent="menu_delivery_logistics_root"
+    action="fleet.fleet_vehicle_action"
+    sequence="30" />
+</odoo>

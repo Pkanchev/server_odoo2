@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- List view -->
+  <record id="view_delivery_expedition_list" model="ir.ui.view">
+    <field name="name">delivery.expedition.list</field>
+    <field name="model">delivery.expedition</field>
+    <field name="arch" type="xml">
+      <list>
+        <field name="name" />
+        <field name="date" />
+        <field name="driver_id" />
+        <field name="state" />
+        <field name="delivery_count" />
+        <field name="total_boxes" />
+        <field name="total_weight" />
+      </list>
+    </field>
+  </record>
+
+  <!-- Allocation by driver: list view so columns show in UI -->
+  <record id="view_delivery_expedition_allocation_list" model="ir.ui.view">
+    <field name="name">delivery.expedition.allocation.list</field>
+    <field name="model">delivery.expedition.allocation</field>
+    <field name="arch" type="xml">
+      <list editable="bottom">
+        <field name="driver_id" string="Шофьор" />
+        <field name="vehicle_id" string="Прев. средство" />
+        <field name="boxes" string="Бр. кашони" />
+        <field name="weight_kg" string="Тегло" />
+      </list>
+    </field>
+  </record>
+
+  <!-- Form view -->
+  <record id="view_delivery_expedition_form" model="ir.ui.view">
+    <field name="name">delivery.expedition.form</field>
+    <field name="model">delivery.expedition</field>
+    <field name="arch" type="xml">
+      <form string="Expedition">
+        <header>
+          <button name="action_set_state_preparing" type="object" string="Preparing"
+            class="btn-primary"
+            invisible="state != 'planned'" />
+          <button name="action_set_state_ready" type="object" string="Ready to load"
+            class="btn-primary"
+            invisible="state != 'preparing'" />
+          <button name="action_set_state_loaded" type="object" string="Loaded"
+            class="btn-primary"
+            invisible="state != 'ready'" />
+          <button name="action_set_state_dispatched" type="object" string="Dispatched"
+            class="btn-primary"
+            invisible="state != 'loaded'" />
+          <button name="action_set_state_delivered" type="object" string="Delivered"
+            class="btn-primary"
+            invisible="state != 'dispatched'" />
+          <button name="action_set_state_done" type="object" string="Done" class="btn-primary"
+            invisible="state != 'delivered'" />
+
+          <!-- Issue/Hold wizard -->
+          <button name="action_open_issue_wizard"
+            type="object"
+            string="Problem / Hold"
+            class="btn-warning"
+            invisible="state == 'done'" />
+
+          <!-- Reset to start -->
+          <button name="action_reset_to_planned"
+            type="object"
+            string="Restart"
+            class="btn-secondary"
+            confirm="Are you sure you want to reset the expedition to the initial status (Planned)?"
+            invisible="state == 'planned'" />
+
+          <field name="state" widget="statusbar"
+            statusbar_visible="planned,preparing,ready,loaded,dispatched,delivered,done,hold" />
+        </header>
+
+        <sheet>
+          <div class="oe_title">
+            <h1>
+              <field name="name" readonly="1" />
+            </h1>
+          </div>
+
+          <group>
+            <group>
+              <field name="date" />
+              <field name="driver_id" />
+              <field name="default_vehicle_id" />
+            </group>
+            <group>
+              <field name="delivery_count" readonly="1" />
+              <field name="total_boxes" readonly="1" />
+              <field name="total_weight" readonly="1" />
+            </group>
+            <group string="Problem / Hold" invisible="issue_kind == False">
+              <group>
+                <field name="issue_kind" readonly="1" />
+                <field name="issue_last_user_id" readonly="1" />
+                <field name="issue_last_date" readonly="1" />
+              </group>
+              <group>
+                <field name="issue_note" readonly="1" nolabel="1" />
+              </group>
+            </group>
+          </group>
+
+          <notebook>
+            <page string="Deliveries">
+
+              <field name="line_ids" context="{'default_expedition_id': id}">
+                <list editable="bottom">
+                  <field name="sequence" string="Маршрут" optional="hide" />
+                  <field name="picking_id" string="Документ" optional="hide" />
+                  <field name="invoice_refs" string="Номер фактура" optional="hide" />
+                  <field name="customer_id" string="Customer" optional="hide" />
+                  <field name="delivery_partner_id" string="Контакт" optional="hide" />
+                  <field name="salesperson_user_id" string="Търговец" optional="hide" />
+                  <field name="delivery_region" string="Регион" optional="hide" />
+                  <field name="delivery_window_from" widget="float_time" string="Часови пр. от" optional="hide" />
+                  <field name="delivery_window_to" widget="float_time" string="Часови пр. до" optional="hide" />
+                  <field name="delivery_priority" string="Приоритет" optional="hide" />
+                  <field name="total_boxes" string="Кашони (общ.)" optional="hide" />
+                  <field name="total_weight" string="Тегло (общ.)" optional="hide" />
+                </list>
+
+                <form string="Delivery Line">
+                  <group>
+                    <field name="sequence" />
+                    <field name="picking_id" />
+                    <field name="customer_id" readonly="1" />
+                    <field name="delivery_partner_id" readonly="1" />
+                    <field name="delivery_address" readonly="1" />
+                    <field name="salesperson_user_id" readonly="1" />
+                    <field name="invoice_refs" readonly="1" />
+                  </group>
+
+                  <group string="Logistics Data">
+                    <group>
+                      <field name="delivery_region" readonly="1" />
+                      <field name="delivery_window_from" widget="float_time" readonly="1" />
+                      <field name="delivery_window_to" widget="float_time" readonly="1" />
+                      <field name="delivery_priority" readonly="1" />
+                    </group>
+                    <group>
+                      <field name="delivery_contact_name" readonly="1" />
+                      <field name="delivery_contact_phone" readonly="1" />
+                    </group>
+                    <group>
+                      <field name="delivery_instructions" readonly="1" />
+                    </group>
+                  </group>
+
+                  <group string="Participants and Vehicles">
+                    <field name="vehicle_id" />
+                    <field name="participant_driver_ids" widget="many2many_tags" />
+                  </group>
+
+                  <group string="Allocation by Driver">
+                    <field name="allocation_ids">
+                      <list editable="bottom">
+                        <field name="driver_id" string="Шофьор" />
+                        <field name="vehicle_id" string="Прев. средство" />
+                        <field name="boxes" string="Бр. кашони" />
+                        <field name="weight_kg" string="Тегло" />
+                      </list>
+                    </field>
+                    <group>
+                      <field name="total_boxes" readonly="1" />
+                      <field name="total_weight" readonly="1" />
+                    </group>
+                  </group>
+                </form>
+              </field>
+            </page>
+
+            <page string="Notes">
+              <field name="note" nolabel="1" />
+            </page>
+          </notebook>
+        </sheet>
+
+        <!-- Right side chatter -->
+        <chatter />
+      </form>
+    </field>
+  </record>
+
+  <!-- Expedition Line list view (standalone menu) -->
+  <record id="view_delivery_expedition_line_list" model="ir.ui.view">
+    <field name="name">delivery.expedition.line.list</field>
+    <field name="model">delivery.expedition.line</field>
+    <field name="arch" type="xml">
+      <list>
+        <field name="expedition_id" />
+        <field name="sequence" />
+        <field name="picking_id" />
+        <field name="invoice_refs" string="Номер фактура" />
+        <field name="customer_id" />
+        <field name="delivery_partner_id" />
+        <field name="salesperson_user_id" string="Търговец" />
+        <field name="delivery_region" />
+        <field name="delivery_window_from" widget="float_time" />
+        <field name="delivery_window_to" widget="float_time" />
+        <field name="delivery_priority" />
+        <field name="total_boxes" />
+        <field name="total_weight" />
+      </list>
+    </field>
+  </record>
+</odoo>

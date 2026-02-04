@@ -1,0 +1,1438 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* delivery_logistics_expedition
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-03 09:30+0000\n"
+"PO-Revision-Date: 2026-02-03 09:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition_issue_wizard.py:0
+msgid "<b>%s</b> by <b>%s</b><br/>Reason:<br/><pre>%s</pre>"
+msgstr "<b>%s</b> от <b>%s</b><br/>Причина:<br/><pre>%s</pre>"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid ""
+"<br/>\n"
+"              <strong>Driver:</strong>"
+msgstr ""
+"<br/>\n"
+"              <strong>Шофьор:</strong>"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid ""
+"<br/>\n"
+"              <strong>Status:</strong>"
+msgstr ""
+"<br/>\n"
+"              <strong>Статус:</strong>"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid ""
+"<br/>\n"
+"              <strong>Vehicle (default):</strong>"
+msgstr ""
+"<br/>\n"
+"              <strong>Кола (по подразбиране):</strong>"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid "<strong>Allocation:</strong>"
+msgstr "<strong>Разпределение:</strong>"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid "<strong>Date:</strong>"
+msgstr "<strong>Дата:</strong>"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid "<strong>Instructions:</strong>"
+msgstr "<strong>Инструкции:</strong>"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid "<strong>Total deliveries:</strong>"
+msgstr "<strong>Общо доставки:</strong>"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.constraint,message:delivery_logistics_expedition.constraint_project_task_uniq_driver_date_company
+msgid "A driver task for this delivery already exists."
+msgstr "Задача за този шофьор и тази доставка вече съществува."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__delivery_address
+msgid "Address"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_delivery_expedition_form
+msgid "Allocation by Driver"
+msgstr "Разпределение по шофьор"
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition.py:0
+msgid "Allocation driver must be one of the participants on the line."
+msgstr "Шофьорът в разпределението трябва да е един от участниците по реда."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__allocation_ids
+msgid "Allocations by Driver"
+msgstr "Разпределения по шофьор"
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition.py:0
+#: model:ir.model.constraint,message:delivery_logistics_expedition.constraint_delivery_expedition_allocation_uniq_driver_date_company
+msgid "An expedition for this driver and date already exists."
+msgstr "Експедиция за този шофьор и дата вече съществува."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_sale_order__delivery_mode_applied
+msgid "Applied Delivery Mode"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_delivery_expedition_form
+msgid ""
+"Are you sure you want to reset the expedition to the initial status "
+"(Planned)?"
+msgstr "Сигурни ли сте, че искате да върнете експедицията към началния статус (Planned)?"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_allocation__boxes
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid "Boxes"
+msgstr "Кашони"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__total_boxes
+msgid "Boxes (Total)"
+msgstr "Кашони (общо)"
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition.py:0
+msgid "Boxes cannot be negative."
+msgstr "Броят кашони не може да е отрицателен."
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_expedition_issue_wizard_form
+msgid "Cancel"
+msgstr "Отказ"
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition.py:0
+msgid ""
+"Cannot reassign driver task because the expedition is already "
+"Loaded/Dispatched. Please contact a dispatcher."
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition.py:0
+msgid ""
+"Cannot set expedition to Loaded.\n"
+"Line for delivery %(picking)s has allocations with zero boxes and zero weight for: %(drivers)s"
+msgstr ""
+"Не може да зададете експедицията като \"Натоварен\".\n"
+"Редът за доставка %(picking)s има разпределения с нула кашони и нулево тегло за: %(drivers)s"
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition.py:0
+msgid ""
+"Cannot set expedition to Loaded.\n"
+"Line for delivery %(picking)s has multiple drivers but missing allocations for: %(drivers)s"
+msgstr ""
+"Не може да зададете експедицията като \"Натоварен\".\n"
+"Редът за доставка %(picking)s има няколко шофьора, но липсват разпределения за: %(drivers)s"
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition.py:0
+msgid "Cannot update driver on a completed/cancelled picking."
+msgstr "Не може да променяте шофьор при приключена/анулирана доставка."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_project_task__logistics_driver_id
+msgid "Canonical driver for uniqueness and synchronization."
+msgstr "Основен шофьор за уникалност и синхронизация."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__company_id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__company_id
+msgid "Company"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model,name:delivery_logistics_expedition.model_res_partner
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__delivery_partner_id
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid "Contact"
+msgstr "Контакт"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_res_partner__delivery_mode
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_res_users__delivery_mode
+msgid ""
+"Controls whether the delivery logic is applied:\n"
+"- Disabled: do not apply the new logic\n"
+"- Only delivery date: compute + propagate delivery date & logistics fields\n"
+"- Full logistics: also create expeditions + tasks + allocations\n"
+"For delivery addresses, 'Inherit' means use the parent company setting."
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__create_uid
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_allocation__create_uid
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_issue_wizard__create_uid
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__create_date
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_allocation__create_date
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_issue_wizard__create_date
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__customer_id
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid "Customer"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_project_task__logistics_invoice_refs
+msgid "Customer invoice numbers linked to the sale order of this delivery."
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_sale_order_form_delivery_logistics
+msgid "Date rules"
+msgstr "Правила за дата"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_partner__delivery_driver_id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_users__delivery_driver_id
+msgid "Default Driver"
+msgstr "Шофьор по подразбиране"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__default_vehicle_id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_users__default_vehicle_id
+msgid "Default Vehicle"
+msgstr "Кола по подразбиране"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_res_users__default_vehicle_id
+msgid ""
+"Default vehicle used for expeditions/tasks when none is specified at "
+"line/allocation level."
+msgstr "Кола по подразбиране за експедиции/задачи, когато не е зададена на ред/разпределение."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition__previous_state__delivered
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition__state__delivered
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_delivery_expedition_form
+msgid "Delivered"
+msgstr "Доставено"
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition.py:0
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__line_ids
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_delivery_expedition_form
+msgid "Deliveries"
+msgstr "Доставки"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid "Delivery"
+msgstr "Доставка"
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition.py:0
+msgid "Delivery %(picking)s - %(partner)s"
+msgstr "Доставка %(picking)s - %(partner)s"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_bank_statement_line__delivery_contact_name
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_move__delivery_contact_name
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__delivery_contact_name
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_logistics_mixin__delivery_contact_name
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_partner__delivery_contact_name
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_users__delivery_contact_name
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_sale_order__delivery_contact_name
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_stock_picking__delivery_contact_name
+msgid "Delivery Contact"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__delivery_count
+msgid "Delivery Count"
+msgstr "Брой доставки"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_bank_statement_line__delivery_date
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_move__delivery_date
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__date
+msgid "Delivery Date"
+msgstr "Дата на доставка"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model,name:delivery_logistics_expedition.model_delivery_expedition
+msgid "Delivery Expedition"
+msgstr "Експедиция за доставка"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model,name:delivery_logistics_expedition.model_delivery_expedition_line
+msgid "Delivery Expedition Line"
+msgstr "Ред експедиция за доставка"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_bank_statement_line__delivery_instructions
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_move__delivery_instructions
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__delivery_instructions
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_logistics_mixin__delivery_instructions
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_partner__delivery_instructions
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_users__delivery_instructions
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_sale_order__delivery_instructions
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_stock_picking__delivery_instructions
+msgid "Delivery Instructions"
+msgstr "Инструкции за доставка"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_partner__delivery_lead_days
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_users__delivery_lead_days
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_sale_order__delivery_lead_days
+msgid "Delivery Lead Days"
+msgstr "Срок за доставка (дни)"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_delivery_expedition_form
+msgid "Delivery Line"
+msgstr "Ред доставка"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model,name:delivery_logistics_expedition.model_delivery_logistics_mixin
+msgid "Delivery Logistics Mixin"
+msgstr "Логистика на доставка (Mixin)"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_partner__delivery_mode
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_users__delivery_mode
+msgid "Delivery Mode"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__picking_id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_project_task__logistics_picking_id
+msgid "Delivery Order"
+msgstr "Документ за доставка"
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition.py:0
+msgid ""
+"Delivery Order: %(picking)s\n"
+"Customer: %(customer)s\n"
+"Delivery Address: %(addr)s\n"
+"Time Window: %(window)s\n"
+"Contact: %(contact)s\n"
+"Region: %(region)s\n"
+"Priority: %(priority)s\n"
+"\n"
+"Instructions:\n"
+"%(instr)s\n"
+msgstr ""
+"Документ за доставка: %(picking)s\n"
+"Клиент: %(customer)s\n"
+"Адрес за доставка: %(addr)s\n"
+"Часови прозорец: %(window)s\n"
+"Контакт: %(contact)s\n"
+"Регион: %(region)s\n"
+"Приоритет: %(priority)s\n"
+"\n"
+"Инструкции:\n"
+"%(instr)s\n"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_bank_statement_line__delivery_contact_phone
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_move__delivery_contact_phone
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__delivery_contact_phone
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_logistics_mixin__delivery_contact_phone
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_partner__delivery_contact_phone
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_users__delivery_contact_phone
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_sale_order__delivery_contact_phone
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_stock_picking__delivery_contact_phone
+msgid "Delivery Phone"
+msgstr "Телефон за доставка"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_bank_statement_line__delivery_priority
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_move__delivery_priority
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__delivery_priority
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_logistics_mixin__delivery_priority
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_sale_order__delivery_priority
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_stock_picking__delivery_priority
+msgid "Delivery Priority"
+msgstr "Приоритет за доставка"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_partner__delivery_weekday
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_users__delivery_weekday
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_sale_order__delivery_weekday
+msgid "Delivery Weekday"
+msgstr "Ден от седмицата за доставка"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_partner_form_delivery_logistics
+msgid "Delivery date (rules)"
+msgstr "Дата на доставка (правила)"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_project_task__logistics_picking_id
+msgid "Delivery order (picking) this task is associated with."
+msgstr "Документ за доставка (пикинг), с който е свързана тази задача."
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_expedition_issue_wizard_form
+msgid "Describe the problem or reason for hold..."
+msgstr "Опиши проблема или причината за задържане..."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__res_partner__delivery_mode__disabled
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__sale_order__delivery_mode_applied__disabled
+msgid "Disabled"
+msgstr "Изключено"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition__previous_state__dispatched
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition__state__dispatched
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_delivery_expedition_form
+msgid "Dispatched"
+msgstr "Изпратено"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_move__display_name
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__display_name
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_allocation__display_name
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_issue_wizard__display_name
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__display_name
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_logistics_mixin__display_name
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_project_task__display_name
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_partner__display_name
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_users__display_name
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_sale_order__display_name
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Име за показване"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition__previous_state__done
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition__state__done
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_delivery_expedition_form
+msgid "Done"
+msgstr "Приключено"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_bank_statement_line__delivery_driver_id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_move__delivery_driver_id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_allocation__driver_id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_logistics_mixin__delivery_driver_id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_sale_order__delivery_driver_id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_stock_picking__delivery_driver_id
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid "Driver"
+msgstr "Шофьор"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_project_task__logistics_driver_id
+msgid "Driver (Logistics)"
+msgstr "Шофьор (логистика)"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__participant_driver_ids
+msgid "Drivers"
+msgstr "Шофьори"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition_line__participant_driver_ids
+msgid ""
+"Drivers participating in this delivery (picking stays single; participants "
+"can be many)."
+msgstr "Шофьори, участващи в тази доставка (доставката е една; участниците могат да са много)."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_account_bank_statement_line__delivery_unload_time
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_account_move__delivery_unload_time
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_logistics_mixin__delivery_unload_time
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_sale_order__delivery_unload_time
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_stock_picking__delivery_unload_time
+msgid "Estimated unloading time in minutes."
+msgstr "Прогнозно време за разтоварване в минути."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__name
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_allocation__expedition_id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_issue_wizard__expedition_id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__expedition_id
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_delivery_expedition_form
+msgid "Expedition"
+msgstr "Експедиция"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model,name:delivery_logistics_expedition.model_delivery_expedition_allocation
+msgid "Expedition Allocation by Driver"
+msgstr "Експедиционно разпределение по шофьор"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model,name:delivery_logistics_expedition.model_delivery_expedition_issue_wizard
+msgid "Expedition Issue Wizard"
+msgstr "Помощник за проблем/задържане"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_project_task__logistics_expedition_line_id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_stock_picking__expedition_line_id
+msgid "Expedition Line"
+msgstr "Ред експедиция"
+
+#. module: delivery_logistics_expedition
+#: model:ir.actions.act_window,name:delivery_logistics_expedition.action_delivery_expedition_lines
+#: model:ir.ui.menu,name:delivery_logistics_expedition.menu_delivery_expedition_lines
+msgid "Expedition Lines"
+msgstr "Експедиционни редове"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_project_task__logistics_expedition_line_id
+msgid "Expedition line this task is associated with."
+msgstr "Ред експедиция, с който е свързана задачата."
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition.py:0
+msgid "Expedition reset from <b>%s</b> to <b>planned</b> by <b>%s</b>."
+msgstr "Експедицията е рестартирана от <b>%s</b> към <b>planned</b> от <b>%s</b>."
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid "Expedition sheet:"
+msgstr "Експедиционен лист:"
+
+#. module: delivery_logistics_expedition
+#: model:ir.actions.act_window,name:delivery_logistics_expedition.action_delivery_expeditions
+#: model:ir.ui.menu,name:delivery_logistics_expedition.menu_delivery_expeditions
+msgid "Expeditions"
+msgstr "Експедиции"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__res_partner__delivery_weekday__4
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__sale_order__delivery_weekday__4
+msgid "Friday"
+msgstr "Петък"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__res_partner__delivery_mode__full
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__sale_order__delivery_mode_applied__full
+msgid "Full logistics"
+msgstr "Пълна логистика"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__account_move__delivery_priority__high
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_logistics_mixin__delivery_priority__high
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__res_partner__delivery_priority__high
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__sale_order__delivery_priority__high
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__stock_picking__delivery_priority__high
+msgid "High"
+msgstr "Висок"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition_issue_wizard__issue_kind__hold
+msgid "Hold"
+msgstr "Задържано"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition__previous_state__hold
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition__state__hold
+msgid "Hold / Problem"
+msgstr "Задържано / Проблем"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_move__id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_allocation__id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_issue_wizard__id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_logistics_mixin__id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_project_task__id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_partner__id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_users__id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_sale_order__id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_stock_picking__id
+msgid "ID"
+msgstr "ID"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition__message_has_error
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_stock_picking__expedition_line_id
+msgid ""
+"If full logistics mode is used, links this delivery order to a specific "
+"expedition line."
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_res_partner__delivery_weekday
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_res_users__delivery_weekday
+msgid ""
+"If lead days is not set, plan delivery on the next occurrence of this "
+"weekday."
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_res_partner__delivery_lead_days
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_res_users__delivery_lead_days
+msgid ""
+"If set, delivery date = sale order date + lead days (has priority over "
+"weekday rule)."
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_res_partner__delivery_weeks_ahead
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_res_users__delivery_weeks_ahead
+msgid ""
+"If weekday is set, add this many weeks ahead (e.g. plan for the next-next "
+"Wednesday)."
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__res_partner__delivery_mode__inherit
+msgid "Inherit (use parent)"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_project_task__logistics_invoice_refs
+msgid "Invoice(s)"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__issue_last_user_id
+msgid "Issue By"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__issue_last_date
+msgid "Issue Date"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__issue_note
+msgid "Issue Note"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__issue_kind
+msgid "Issue Type"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model,name:delivery_logistics_expedition.model_account_move
+msgid "Journal Entry"
+msgstr "Записи в Дневника"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__write_uid
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_allocation__write_uid
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_issue_wizard__write_uid
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__write_date
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_allocation__write_date
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_issue_wizard__write_date
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition__issue_note
+msgid "Last hold/problem reason."
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_allocation__line_id
+msgid "Line"
+msgstr "Ред"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_picking_form_delivery_logistics
+msgid "Links"
+msgstr "Връзки"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition__previous_state__loaded
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition__state__loaded
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_delivery_expedition_form
+msgid "Loaded"
+msgstr "Натоварен"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid "Location/Address"
+msgstr "Обект/Адрес"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_sale_order__lock_delivery_logistics
+msgid "Lock Logistics Data"
+msgstr "Заключи логистичните данни"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__is_locked
+msgid "Locked"
+msgstr "Заключено"
+
+#. module: delivery_logistics_expedition
+#: model:ir.ui.menu,name:delivery_logistics_expedition.menu_delivery_logistics_root
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_move_form_delivery_logistics
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_partner_form_delivery_logistics
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_picking_form_delivery_logistics
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_sale_order_form_delivery_logistics
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_task_form_delivery_logistics
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_users_form_delivery_vehicle
+msgid "Logistics"
+msgstr "Логистика"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_delivery_expedition_form
+msgid "Logistics Data"
+msgstr "Логистични данни"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__delivery_date
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_logistics_mixin__delivery_date
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_sale_order__delivery_date
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_stock_picking__delivery_date
+msgid "Logistics Delivery Date"
+msgstr "Логистична дата за доставка"
+
+#. module: delivery_logistics_expedition
+#: model:res.groups,name:delivery_logistics_expedition.group_delivery_logistics_dispatcher
+msgid "Logistics Dispatcher"
+msgstr "Логистичен диспечер"
+
+#. module: delivery_logistics_expedition
+#: model:res.groups,name:delivery_logistics_expedition.group_delivery_logistics_user
+msgid "Logistics User"
+msgstr "Потребител Логистика"
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/project_task.py:0
+msgid "Logistics task linked to a delivery order must have a driver."
+msgstr "Логистична задача, свързана с документ за доставка, трябва да има шофьор."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__account_move__delivery_priority__low
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_logistics_mixin__delivery_priority__low
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__res_partner__delivery_priority__low
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__sale_order__delivery_priority__low
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__stock_picking__delivery_priority__low
+msgid "Low"
+msgstr "Нисък"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__driver_id
+msgid "Main Driver"
+msgstr "Основен шофьор"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_project_task__logistics_is_primary
+msgid ""
+"Marks the task representing the expedition main driver for the delivery."
+msgstr "Отбелязва задачата, която представлява основния шофьор в експедицията за тази доставка."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_partner_form_delivery_logistics
+msgid "Mode"
+msgstr "Режим"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_sale_order_form_delivery_logistics
+msgid "Mode and control"
+msgstr "Режим и контрол"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__res_partner__delivery_weekday__0
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__sale_order__delivery_weekday__0
+msgid "Monday"
+msgstr "Понеделник"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__account_move__delivery_priority__normal
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_logistics_mixin__delivery_priority__normal
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__res_partner__delivery_priority__normal
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__sale_order__delivery_priority__normal
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__stock_picking__delivery_priority__normal
+msgid "Normal"
+msgstr "Нормален"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__note
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_delivery_expedition_form
+msgid "Notes"
+msgstr "Бележки"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__res_partner__delivery_mode__date_only
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__sale_order__delivery_mode_applied__date_only
+msgid "Only delivery date"
+msgstr "Само дата на доставка"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_partner_form_delivery_logistics
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_sale_order_form_delivery_logistics
+msgid "Operational data"
+msgstr "Оперативни данни"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_delivery_expedition_form
+msgid "Participants and Vehicles"
+msgstr "Участници и превозни средства"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition__previous_state__planned
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition__state__planned
+msgid "Planned"
+msgstr "Планирана"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_account_bank_statement_line__delivery_date
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_account_move__delivery_date
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition_line__delivery_date
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_logistics_mixin__delivery_date
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_sale_order__delivery_date
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_stock_picking__delivery_date
+msgid "Planned delivery date used by the Logistics/Expeditions workflow."
+msgstr "Планирана дата на доставка, използвана от логистичния/експедиционния процес."
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition_issue_wizard.py:0
+msgid "Please enter a reason/description."
+msgstr "Моля, въведете причина/описание."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition__previous_state__preparing
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition__state__preparing
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_delivery_expedition_form
+msgid "Preparing"
+msgstr "Подготовка"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__previous_state
+msgid "Previous State"
+msgstr "Предишен статус"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_project_task__logistics_is_primary
+msgid "Primary Driver Task"
+msgstr "Основна задача за шофьора"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_partner__delivery_priority
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_users__delivery_priority
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid "Priority"
+msgstr "Приоритет"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_account_bank_statement_line__delivery_priority
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_account_move__delivery_priority
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition_line__delivery_priority
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_logistics_mixin__delivery_priority
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_sale_order__delivery_priority
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_stock_picking__delivery_priority
+msgid ""
+"Priority used by the Logistics/Expeditions workflow (separate from Odoo "
+"picking priority)."
+msgstr "Приоритет, използван от логистичния/експедиционния процес (различен от приоритета на пикинга в Odoo)."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition_issue_wizard__issue_kind__problem
+msgid "Problem"
+msgstr "Проблем"
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition.py:0
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_delivery_expedition_form
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_expedition_issue_wizard_form
+msgid "Problem / Hold"
+msgstr "Проблем / Задържано"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition__default_vehicle_id
+msgid "Proposed from main driver's default vehicle; can be overridden."
+msgstr "Предлага се от колата по подразбиране на основния шофьор; може да бъде променена."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__rating_ids
+msgid "Ratings"
+msgstr "Оценки"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition__previous_state__ready
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition__state__ready
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_delivery_expedition_form
+msgid "Ready to load"
+msgstr "Готово за товарене"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_issue_wizard__note
+msgid "Reason / Description"
+msgstr "Причина / Описание"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_bank_statement_line__delivery_region
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_move__delivery_region
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__delivery_region
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_logistics_mixin__delivery_region
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_partner__delivery_region
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_users__delivery_region
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_sale_order__delivery_region
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_stock_picking__delivery_region
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid "Region"
+msgstr "Регион"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__activity_user_id
+msgid "Responsible User"
+msgstr "Отговорен потребител"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_delivery_expedition_form
+msgid "Restart"
+msgstr "Рестарт"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__sequence
+msgid "Route Sequence"
+msgstr "Маршрутна последователност"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Грешка при доставка на SMS"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model,name:delivery_logistics_expedition.model_sale_order
+msgid "Sales Order"
+msgstr "Поръчка"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__res_partner__delivery_weekday__5
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__sale_order__delivery_weekday__5
+msgid "Saturday"
+msgstr "Събота"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.view_expedition_issue_wizard_form
+msgid "Save"
+msgstr "Запази"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_sale_order__delivery_mode_applied
+msgid ""
+"Shows which delivery mode is effectively applied to this sale order (address"
+" overrides customer)."
+msgstr "Показва кой режим на доставка реално се прилага за тази продажба (адресът има предимство пред клиента)."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__state
+msgid "Status"
+msgstr "Статус"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Статус на база дейностите\n"
+"Просрочено: Падежът вече е минал\n"
+"Днес: Дейността е за днес\n"
+"Планирано: Бъдещи дейности."
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition.py:0
+msgid "Status changed from <b>%s</b> to <b>%s</b> by <b>%s</b>."
+msgstr ""
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition__issue_kind
+msgid "Sub-type when expedition is put on Hold / Problem."
+msgstr "Подтип, когато експедицията е в статус Задържано / Проблем."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__res_partner__delivery_weekday__6
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__sale_order__delivery_weekday__6
+msgid "Sunday"
+msgstr "Неделя"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model,name:delivery_logistics_expedition.model_project_task
+msgid "Task"
+msgstr "Задача"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition__is_locked
+msgid ""
+"Technical field: True when expedition is in "
+"loaded/dispatched/delivered/done."
+msgstr "Техническо поле: истина, когато експедицията е в статус натоварен/изпратено/доставено/приключено."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition__previous_state
+msgid "Technical: previous state before going into Hold / Problem."
+msgstr "Техническо: предишен статус преди преминаване в Задържано / Проблем."
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition.py:0
+msgid ""
+"This expedition is already Loaded/Dispatched. Changing driver/vehicle is "
+"restricted to dispatchers."
+msgstr "Тази експедиция вече е Натоваренa/Изпратенa. Смяната на шофьор/превозно средство е разрешена само за диспечери."
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition.py:0
+msgid ""
+"This expedition is already Loaded/Dispatched. Deleting allocations is "
+"restricted to dispatchers."
+msgstr "Тази експедиция вече е Натоваренa/Изпратенa. Изтриването на разпределения е разрешено само за диспечери."
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition.py:0
+msgid ""
+"This expedition is already Loaded/Dispatched. Editing allocations is "
+"restricted to dispatchers."
+msgstr "Тази експедиция вече е Натоваренa/Изпратенa. Редакцията на разпределения е разрешена само за диспечери."
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition.py:0
+msgid ""
+"This expedition is already Loaded/Dispatched. Editing "
+"drivers/allocations/vehicle is restricted to dispatchers."
+msgstr "Тази експедиция вече е Натоваренa/Изпратенa. Редакцията на шофьори/разпределения/превозно средство е разрешена само за диспечери."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__res_partner__delivery_weekday__3
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__sale_order__delivery_weekday__3
+msgid "Thursday"
+msgstr "Четвъртък"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_bank_statement_line__delivery_window_from
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_move__delivery_window_from
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__delivery_window_from
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_logistics_mixin__delivery_window_from
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_partner__delivery_window_from
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_users__delivery_window_from
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_sale_order__delivery_window_from
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_stock_picking__delivery_window_from
+msgid "Time Window From"
+msgstr "Часови прозорец от"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_bank_statement_line__delivery_window_to
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_move__delivery_window_to
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__delivery_window_to
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_logistics_mixin__delivery_window_to
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_partner__delivery_window_to
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_users__delivery_window_to
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_sale_order__delivery_window_to
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_stock_picking__delivery_window_to
+msgid "Time Window To"
+msgstr "Часови прозорец до"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_account_bank_statement_line__delivery_window_to
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_account_move__delivery_window_to
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition_line__delivery_window_to
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_logistics_mixin__delivery_window_to
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_sale_order__delivery_window_to
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_stock_picking__delivery_window_to
+msgid "Time window end (hours)."
+msgstr "Край на времевия прозорец (часове)."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_account_bank_statement_line__delivery_window_from
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_account_move__delivery_window_from
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition_line__delivery_window_from
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_logistics_mixin__delivery_window_from
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_sale_order__delivery_window_from
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_stock_picking__delivery_window_from
+msgid "Time window start (hours)."
+msgstr "Начало на времевия прозорец (часове)."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__total_boxes
+msgid "Total Boxes"
+msgstr "Общо кашони"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__total_weight
+msgid "Total Weight (kg)"
+msgstr "Общо тегло (kg)"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model,name:delivery_logistics_expedition.model_stock_picking
+msgid "Transfer"
+msgstr "Прехвърлете"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__res_partner__delivery_weekday__1
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__sale_order__delivery_weekday__1
+msgid "Tuesday"
+msgstr "Вторник"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_issue_wizard__issue_kind
+msgid "Type"
+msgstr "Тип"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Тип на дейността за изключение върху записа."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_bank_statement_line__delivery_unload_time
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_account_move__delivery_unload_time
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_logistics_mixin__delivery_unload_time
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_partner__delivery_unload_time
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_users__delivery_unload_time
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_sale_order__delivery_unload_time
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_stock_picking__delivery_unload_time
+msgid "Unload Time (min)"
+msgstr "Време за разтоварване (мин)"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__account_move__delivery_priority__urgent
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_logistics_mixin__delivery_priority__urgent
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__res_partner__delivery_priority__urgent
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__sale_order__delivery_priority__urgent
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__stock_picking__delivery_priority__urgent
+msgid "Urgent"
+msgstr "Спешен"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_project_task__display_name
+msgid ""
+"Use these keywords in the title to set new tasks:\n"
+"\n"
+"            #tags Set tags on the task\n"
+"            @user Assign the task to a user\n"
+"            ! Set the task a medium priority\n"
+"            !! Set the task a high priority\n"
+"            !!! Set the task a urgent priority\n"
+"\n"
+"            Make sure to use the right format and order e.g. Improve the configuration screen #feature #v16 @Mitchell !"
+msgstr ""
+"Използвайте тези ключови думи в заглавието, за да създавате нови задачи:\n"
+"\n"
+"            #tags Задаване на тагове на задачата\n"
+"            @user Задаване на отговорник на задачата\n"
+"            ! Задача със среден приоритет\n"
+"            !! Задача с висок приоритет\n"
+"            !!! Задача със спешен приоритет\n"
+"\n"
+"            Уверете се, че използвате правилния формат и ред, напр.: Подобряване на екрана за настройки #feature #v16 @Mitchell !"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model,name:delivery_logistics_expedition.model_res_users
+msgid "User"
+msgstr "Потребител"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_allocation__vehicle_id
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_project_task__logistics_vehicle_id
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid "Vehicle"
+msgstr "Превозно средство"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__vehicle_id
+msgid "Vehicle (Line)"
+msgstr "Превозно средство (ред)"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_project_task__logistics_vehicle_id
+msgid ""
+"Vehicle used by this driver for this delivery (from allocation/line/user "
+"defaults)."
+msgstr "Превозно средство, използвано от този шофьор за тази доставка (от разпределение/ред/стойности по подразбиране на потребителя)."
+
+#. module: delivery_logistics_expedition
+#: model:ir.ui.menu,name:delivery_logistics_expedition.menu_delivery_fleet_vehicles
+msgid "Vehicles"
+msgstr "Превозни средства"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition__website_message_ids
+msgid "Website Messages"
+msgstr "Съобщения от уебсайта"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_delivery_expedition__website_message_ids
+msgid "Website communication history"
+msgstr "История на комуникацията през уебсайта"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__res_partner__delivery_weekday__2
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__sale_order__delivery_weekday__2
+msgid "Wednesday"
+msgstr "Сряда"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_partner__delivery_weeks_ahead
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_res_users__delivery_weeks_ahead
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_sale_order__delivery_weeks_ahead
+msgid "Weeks Ahead"
+msgstr "Седмици напред"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid "Weight"
+msgstr "Тегло"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_line__total_weight
+msgid "Weight (Total kg)"
+msgstr "Тегло (общо kg)"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,field_description:delivery_logistics_expedition.field_delivery_expedition_allocation__weight_kg
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid "Weight (kg)"
+msgstr "Тегло (kg)"
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition.py:0
+msgid "Weight cannot be negative."
+msgstr "Теглото не може да е отрицателно."
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields,help:delivery_logistics_expedition.field_sale_order__lock_delivery_logistics
+msgid ""
+"When enabled, selecting a different delivery address/customer will NOT "
+"overwrite delivery date and logistics fields. This prevents accidental "
+"overwrites after dispatcher edits."
+msgstr "Когато е включено, изборът на друг адрес/клиент за доставка НЯМА да презаписва датата и логистичните полета. Това предпазва от неволно презаписване след редакции от диспечер."
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid "Window"
+msgstr "Прозорец"
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/sale_order.py:0
+msgid ""
+"You cannot modify delivery logistics on this Sales Order because the related"
+" expedition is already Loaded/Dispatched. Please contact a dispatcher."
+msgstr "Не можете да променяте логистичните данни по тази продажба, защото свързаната експедиция вече е в статус Натоварен/Изпратено. Моля, свържете се с диспечер."
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid ""
+"|  \n"
+"              <strong>Total boxes:</strong>"
+msgstr ""
+"|  \n"
+"              <strong>Общо кашони:</strong>"
+
+#. module: delivery_logistics_expedition
+#: model_terms:ir.ui.view,arch_db:delivery_logistics_expedition.report_delivery_expedition_sheet
+msgid ""
+"|  \n"
+"              <strong>Total weight (kg):</strong>"
+msgstr ""
+"|  \n"
+"              <strong>Общо тегло (kg):</strong>"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition__issue_kind__hold
+msgid "Задържано"
+msgstr "Задържано"
+
+#. module: delivery_logistics_expedition
+#: model:ir.model.fields.selection,name:delivery_logistics_expedition.selection__delivery_expedition__issue_kind__problem
+msgid "Проблем"
+msgstr "Проблем"
+
+#. module: delivery_logistics_expedition
+#. odoo-python
+#: code:addons/delivery_logistics_expedition/models/expedition.py:0
+msgid ""
+"Статус сменен: <b>%s</b> → <b>%s</b><br/>Променен от: <b>%s</b><br/>Кога: "
+"<b>%s</b>"
+msgstr ""
+"Статус сменен: <b>%s</b> → <b>%s</b><br/>Променен от: <b>%s</b><br/>Кога: "
+"<b>%s</b>"

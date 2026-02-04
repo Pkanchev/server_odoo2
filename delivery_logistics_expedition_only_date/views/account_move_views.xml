@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_move_form_delivery_logistics" model="ir.ui.view">
+    <field name="name">account.move.form.delivery.logistics</field>
+    <field name="model">account.move</field>
+    <field name="inherit_id" ref="account.view_move_form" />
+    <field name="arch" type="xml">
+      <xpath expr="//sheet/notebook" position="inside">
+        <page string="Logistics">
+          <group>
+            <group>
+              <field name="delivery_date" />
+              <field name="delivery_driver_id" />
+              <field name="delivery_region" />
+              <field name="delivery_priority" />
+            </group>
+            <group>
+              <field name="delivery_window_from" widget="float_time" />
+              <field name="delivery_window_to" widget="float_time" />
+              <field name="delivery_unload_time" />
+            </group>
+            <group>
+              <field name="delivery_contact_name" />
+              <field name="delivery_contact_phone" />
+            </group>
+            <group>
+              <field name="delivery_instructions" nolabel="1" />
+            </group>
+
+            <!-- Traceability link to expedition line(s) (optional / when full logistics mode is
+            used) -->
+            <group>
+              <!-- If exactly one expedition line is detected, show it as a clickable Many2one link -->
+              <field name="logistics_expedition_line_id"
+                readonly="1"
+                invisible="logistics_expedition_line_count != 1" />
+
+              <!-- If multiple lines exist, show a button that opens the list -->
+              <button name="action_open_logistics_expedition_lines"
+                type="object"
+                string="Expedition Lines"
+                class="btn-link"
+                invisible="logistics_expedition_line_count &lt; 1" />
+            </group>
+          </group>
+        </page>
+      </xpath>
+    </field>
+  </record>
+</odoo>

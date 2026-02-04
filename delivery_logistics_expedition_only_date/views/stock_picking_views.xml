@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_picking_form_delivery_logistics" model="ir.ui.view">
+    <field name="name">stock.picking.form.delivery.logistics</field>
+    <field name="model">stock.picking</field>
+    <field name="inherit_id" ref="stock.view_picking_form" />
+    <field name="arch" type="xml">
+      <xpath expr="//sheet/notebook" position="inside">
+        <page string="Logistics">
+          <group>
+            <group>
+              <field name="delivery_date" />
+              <field name="delivery_driver_id" />
+              <field name="delivery_region" />
+              <field name="delivery_priority" />
+            </group>
+            <group>
+              <field name="delivery_window_from" widget="float_time" />
+              <field name="delivery_window_to" widget="float_time" />
+              <field name="delivery_unload_time" />
+            </group>
+            <group>
+              <field name="delivery_contact_name" />
+              <field name="delivery_contact_phone" />
+            </group>
+            <group>
+              <field name="delivery_instructions" nolabel="1" />
+            </group>
+          </group>
+
+          <group string="Links">
+            <field name="expedition_line_id" readonly="1" />
+          </group>
+
+        </page>
+      </xpath>
+
+      <!-- Smart button в button_box -->
+      <xpath expr="//sheet/div[@name='button_box']" position="inside">
+        <button
+          name="action_open_expedition_line"
+          type="object"
+          class="oe_stat_button"
+          icon="fa-external-link"
+          invisible="not expedition_line_id"
+        >
+          <div class="o_stat_info">
+            <span class="o_stat_text">Ред експедиция</span>
+          </div>
+        </button>
+      </xpath>
+    </field>
+  </record>
+</odoo>

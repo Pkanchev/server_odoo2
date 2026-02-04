@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_task_form_delivery_logistics" model="ir.ui.view">
+    <field name="name">project.task.form.delivery.logistics</field>
+    <field name="model">project.task</field>
+    <field name="inherit_id" ref="project.view_task_form2" />
+    <field name="arch" type="xml">
+      <xpath expr="//sheet/notebook" position="inside">
+        <page string="Logistics">
+          <group>
+            <field name="logistics_picking_id" />
+            <field name="logistics_invoice_refs" readonly="1" />
+            <field name="logistics_expedition_line_id" />
+            <field name="logistics_driver_id" readonly="1" />
+            <field name="logistics_vehicle_id" />
+            <field name="logistics_is_primary" readonly="1" />
+          </group>
+        </page>
+      </xpath>
+    </field>
+  </record>
+</odoo>

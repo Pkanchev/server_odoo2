@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_sale_order_form_delivery_logistics" model="ir.ui.view">
+    <field name="name">sale.order.form.delivery.logistics</field>
+    <field name="model">sale.order</field>
+    <field name="inherit_id" ref="sale.view_order_form" />
+    <field name="arch" type="xml">
+      <xpath expr="//sheet/notebook" position="inside">
+        <page string="Logistics">
+          <group>
+            <group string="Mode and control">
+              <field name="delivery_mode_applied" readonly="1" />
+              <field name="lock_delivery_logistics" />
+            </group>
+
+            <group string="Date rules">
+              <field name="delivery_lead_days" />
+              <field name="delivery_weekday" />
+              <field name="delivery_weeks_ahead" />
+            </group>
+          </group>
+
+          <group string="Operational data">
+            <group>
+              <field name="delivery_date" />
+              <field name="delivery_driver_id" />
+              <field name="delivery_region" />
+              <field name="delivery_priority" />
+            </group>
+            <group>
+              <field name="delivery_window_from" widget="float_time" />
+              <field name="delivery_window_to" widget="float_time" />
+              <field name="delivery_unload_time" />
+            </group>
+            <group>
+              <field name="delivery_contact_name" />
+              <field name="delivery_contact_phone" />
+            </group>
+            <group>
+              <field name="delivery_instructions" nolabel="1" />
+            </group>
+          </group>
+        </page>
+      </xpath>
+    </field>
+  </record>
+</odoo>

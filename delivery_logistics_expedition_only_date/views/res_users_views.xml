@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_users_form_delivery_vehicle" model="ir.ui.view">
+        <field name="name">res.users.form.delivery.vehicle</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <!-- Odoo 19: the internal groups changed; add a dedicated tab instead of relying on group name -->
+            <xpath expr="//sheet/notebook" position="inside">
+                <page string="Logistics">
+                    <group>
+                        <field name="default_vehicle_id"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
